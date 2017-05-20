@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, MainView {
         etNumberOne = findViewById(R.id.et_number_1) as EditText
         etNumberTwo = findViewById(R.id.et_number_2) as EditText
         tvResult = findViewById(R.id.tv_result) as TextView
+        findViewById(R.id.btn_divide).setOnClickListener(this)
+        findViewById(R.id.btn_minus).setOnClickListener(this)
+        findViewById(R.id.btn_plus).setOnClickListener(this)
+        findViewById(R.id.btn_multiply).setOnClickListener(this)
 
         mainController = MainController(this, Calculator.instance)
     }
@@ -42,7 +46,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, MainView {
         try {
             numbers[0] = etNumberOne?.text.toString().toInt()
             numbers[1] = etNumberTwo?.text.toString().toInt()
-        } catch (e : NumberFormatException) {
+        } catch (e: NumberFormatException) {
             setResultCalculate(e.message)
         }
 

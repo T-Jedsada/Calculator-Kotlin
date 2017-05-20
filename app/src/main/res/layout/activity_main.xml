@@ -31,7 +31,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:text="@string/plus" />
 
         <android.support.v7.widget.AppCompatButton
@@ -39,7 +38,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:text="@string/minus" />
 
         <android.support.v7.widget.AppCompatButton
@@ -47,7 +45,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:text="@string/multiply"
             android:textAllCaps="false" />
 
@@ -56,7 +53,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:text="@string/divide" />
     </LinearLayout>
 
