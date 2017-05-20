@@ -2,9 +2,11 @@ package pondthaitay.calculate.kotlin
 
 import org.junit.Test
 
-class MainControllerTest {
+class CalculatorTest {
+//    var cal : Calculator = Calculator.instance
     @Test
     fun plus() {
+
     }
 
     @Test

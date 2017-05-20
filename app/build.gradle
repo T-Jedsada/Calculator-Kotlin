@@ -19,17 +19,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        test.java.srcDirs += 'src/test/kotlin'
-    }
 }
 
-afterEvaluate {
-    android.sourceSets.all { sourceSet ->
-        if (!sourceSet.name.startsWith("test")) {
-            sourceSet.kotlin.setSrcDirs([])
-        }
-    }
+task copyTestClasses(type: Copy) {
+    from "build/tmp/kotlin-classes/debugUnitTest"
+    into "build/intermediates/classes/debug"
 }
 
 dependencies {
@@ -42,5 +36,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testCompile 'com.nhaarman:mockito-kotlin:1.4.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
