@@ -1,8 +1,7 @@
+package pondthaitay.calculate.kotlin
+
 import org.junit.Test
 
-/**
- * Created by pondthaitay on 5/20/2017 AD.
- */
 class MainControllerTest {
     @Test
     fun plus() {
