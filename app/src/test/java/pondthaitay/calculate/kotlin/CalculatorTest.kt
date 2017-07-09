@@ -4,6 +4,7 @@ import org.junit.Assert
 import org.junit.Test
 
 class CalculatorTest {
+
     var cal : Calculator = Calculator.instance
 
     @Test
